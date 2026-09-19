@@ -303,6 +303,16 @@
     }
     .glow-1 { width: 500px; height: 500px; background: #7c3aed; top: -150px; left: -100px; }
     .glow-2 { width: 400px; height: 400px; background: #0088cc; bottom: -100px; right: 20%; }
+
+    /* ── Mobile: stack + allow scroll instead of clipping ── */
+    @media (max-width: 768px) {
+      html, body { overflow: auto; height: auto; }
+      .shell { height: auto; grid-template-rows: 48px auto 32px; }
+      main { grid-template-columns: 1fr; overflow: visible; }
+      .left { border-right: none; border-bottom: 1px solid var(--border); padding: 1.5rem; }
+      .tagline { max-width: 100%; }
+      .features-grid { grid-template-columns: repeat(2, 1fr); }
+    }
   </style>
 </head>
 <body>
